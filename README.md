@@ -6,7 +6,7 @@ You can test the API's using Postman. Use this [postman collection](https://www.
 Below is the APIs used in the application and some examples along with it. 
 
 ## 👉 Insert student details
-  #### Endpoint :
+  ### Endpoint :
   ```
   http://3.110.186.160/insert
   ```  
@@ -46,7 +46,7 @@ Below is the APIs used in the application and some examples along with it.
   ```
   
 ## 👉 Get all student details
-  #### Endpoint :
+  ### Endpoint :
   ```
   http://3.110.186.160/get-all-students
   ```  
@@ -94,7 +94,7 @@ Below is the APIs used in the application and some examples along with it.
   ```
   
 ## 👉 Get one student details
-  #### Endpoint :
+  ### Endpoint :
   ```
   http://3.110.186.160/get/{id}
   ```  
@@ -134,7 +134,7 @@ Below is the APIs used in the application and some examples along with it.
   ```
   
 ## 👉 Update one student details
-  #### Endpoint :
+  ### Endpoint :
   ```
   http://3.110.186.160/update/{id}
   ```  
@@ -165,7 +165,7 @@ Below is the APIs used in the application and some examples along with it.
   ```
   
 ## 👉 Delete one student details
-  #### Endpoint :
+  ### Endpoint :
   ```
   http://3.110.186.160/delete/63e62b44cfb9e4b870113b1d
   ```  
@@ -187,7 +187,7 @@ Below is the APIs used in the application and some examples along with it.
   }
   ```
 ## 👉 Delete entire collection or database
-  #### Endpoint :
+  ### Endpoint :
   ```
   http://3.110.186.160/drop-collection
   ```  
