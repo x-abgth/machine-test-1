@@ -1,8 +1,10 @@
 ## Machine Test
+The application is a student management application and store students information like first_name, last_name, grade, email, phone_number. All the APIs provided here is to alter or modify these datas. The database used here is MongoDB Atlas and the server is hosted in the AWS EC2 instance. 
 
 ## API Specification
-The application is a student management application and store students information like first_name, last_name, grade, email, phone_number. All the APIs provided here is to alter or modify these datas. The database used here is MongoDB Atlas and the server is hosted in the AWS EC2 instance. 
+You can test the API's using Postman. Use this [postman collection](https://www.postman.com/abgth/workspace/machine-test/collection/20732200-f28800df-248c-4721-9a8b-74b0164c8481?action=share&creator=20732200) to test the API's, all the documentation you needed is provided in the following.
 Below is the APIs used in the application and some examples along with it. 
+
 ## 👉 Insert student details
   #### Endpoint :
   ```
@@ -137,11 +139,11 @@ Below is the APIs used in the application and some examples along with it.
   http://3.110.186.160/update/{id}
   ```  
   ### Method:
-  `POST/PUT`
+  `PUT/PATCH`
   
   ### Example Request:
   ```
-  curl -X POST http://3.110.186.160/update/63e62b6acfb9e4b870113b1e \
+  curl -X PUT http://3.110.186.160/update/63e62b6acfb9e4b870113b1e \
   -H "Content-Type: application/json" \
   -d '{
       "fname": "John",
