@@ -2,7 +2,7 @@
 The application is a student management application and store students information like first_name, last_name, grade, email, phone_number. All the APIs provided here is to alter or modify these datas. The database used here is MongoDB Atlas and the server is hosted in the AWS EC2 instance. 
 
 ## API Specification
-You can test the API's using Postman. Use this [postman collection](https://www.postman.com/abgth/workspace/machine-test/collection/20732200-f28800df-248c-4721-9a8b-74b0164c8481?action=share&creator=20732200) to test the API's, all the documentation you needed is provided in the following.
+You can test the API's using Postman. Use this [postman collection](https://www.postman.com/abgth/workspace/machine-test/collection/20732200-f28800df-248c-4721-9a8b-74b0164c8481?action=share&creator=20732200) to test the API's, all the documentation you needed is provided in the following.<br>
 Below is the APIs used in the application and some examples along with it. 
 
 ## 👉 Insert student details
