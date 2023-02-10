@@ -1,4 +1,4 @@
-package utils
+package handlers
 
 import (
 	"encoding/json"
@@ -11,7 +11,7 @@ type JsonResponse struct {
 	Data    any    `json:"data,omitempty"`
 }
 
-func WriteJSON(w http.ResponseWriter, status int, data any, headers ...http.Header) error {
+func (app *JsonResponse) WriteJSON(w http.ResponseWriter, status int, data any, headers ...http.Header) error {
 	out, err := json.Marshal(data)
 	if err != nil {
 		return err
@@ -34,7 +34,7 @@ func WriteJSON(w http.ResponseWriter, status int, data any, headers ...http.Head
 	return nil
 }
 
-func ErrorJSON(w http.ResponseWriter, err error, status ...int) error {
+func (app *JsonResponse) ErrorJSON(w http.ResponseWriter, err error, status ...int) error {
 	statusCode := http.StatusBadRequest
 
 	if len(status) > 0 {
@@ -45,5 +45,5 @@ func ErrorJSON(w http.ResponseWriter, err error, status ...int) error {
 	payload.Error = true
 	payload.Message = err.Error()
 
-	return WriteJSON(w, statusCode, payload)
+	return app.WriteJSON(w, statusCode, payload)
 }

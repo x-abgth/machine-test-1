@@ -7,10 +7,13 @@ import (
 )
 
 func InitRoutes(newMux *mux.Router) {
-	newMux.HandleFunc("/insert", handlers.InsertStudentHandler)
-	newMux.HandleFunc("/get/{id}", handlers.GetStudentHandler)
-	newMux.HandleFunc("/get-all-students", handlers.GetAllStudentsHandler)
-	newMux.HandleFunc("/update/{id}", handlers.UpdateStudentHandler)
-	newMux.HandleFunc("/delete/{id}", handlers.DeleteStudentHandler)
-	newMux.HandleFunc("/drop-collection", handlers.DropCollectionHandler)
+
+	var hanlder handlers.JsonResponse
+
+	newMux.HandleFunc("/insert", hanlder.InsertStudentHandler)
+	newMux.HandleFunc("/get/{id}", hanlder.GetStudentHandler)
+	newMux.HandleFunc("/get-all-students", hanlder.GetAllStudentsHandler)
+	newMux.HandleFunc("/update/{id}", hanlder.UpdateStudentHandler)
+	newMux.HandleFunc("/delete/{id}", hanlder.DeleteStudentHandler)
+	newMux.HandleFunc("/drop-collection", hanlder.DropCollectionHandler)
 }

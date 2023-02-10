@@ -22,8 +22,8 @@ func main() {
 
 	routes.InitRoutes(mux)
 
-	log.Println("Starting mail service on port :3000")
-	err = http.ListenAndServe(":3000", mux)
+	log.Println("Starting server on port :8080")
+	err = http.ListenAndServe(":8080", mux)
 	if err != nil {
 		log.Fatal("SERVER ERROR - ", err)
 	}

@@ -1,7 +1,6 @@
 package usecase
 
 import (
-	"log"
 	"machine-test-1/database"
 	"machine-test-1/models"
 )
@@ -57,22 +56,18 @@ func UpdateStudentUsecase(id, fName, lName, grade, email, phone string) error {
 		Phone:     phone,
 	}
 
-	result, err := dbInstance.Update(id, data)
+	_, err := dbInstance.Update(id, data)
 	if err != nil {
 		return err
 	}
-
-	log.Println(result)
 
 	return nil
 }
 func DeleteStudentUsecase(id string) error {
-	result, err := dbInstance.DeleteOneStudent(id)
+	_, err := dbInstance.DeleteOneStudent(id)
 	if err != nil {
 		return err
 	}
-
-	log.Println(result)
 
 	return nil
 }

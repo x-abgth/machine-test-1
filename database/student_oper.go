@@ -44,7 +44,7 @@ func (s Respository) GetAllStudentsDetails() ([]models.Student, error) {
 	collection := s.Client.Database("students").Collection("students")
 
 	opts := options.Find()
-	opts.SetSort(bson.D{{"student_id", -1}})
+	opts.SetSort(bson.D{{"_id", -1}})
 
 	cursor, err := collection.Find(context.TODO(), bson.D{}, opts)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s Respository) GetStudent(id string) (models.Student, error) {
 		return student, err
 	}
 
-	err = collection.FindOne(ctx, bson.M{"_student_id": docID}).Decode(&student)
+	err = collection.FindOne(ctx, bson.M{"_id": docID}).Decode(&student)
 	if err != nil {
 		return student, err
 	}
@@ -103,7 +103,7 @@ func (s Respository) Update(id string, student models.Student) (*mongo.UpdateRes
 
 	result, err := collection.UpdateOne(
 		ctx,
-		bson.M{"_student_id": docID},
+		bson.M{"_id": docID},
 		bson.D{
 			{
 				"$set", bson.D{
