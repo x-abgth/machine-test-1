@@ -100,16 +100,7 @@ Below is the APIs used in the application and some examples along with it.
   ```  
   ### Method:
   `GET`
-  
-  ### Request Body:
-  | Parameter | Type | Description |
-  |-----------|------|-------------|
-  | `fname` | string | First name of the student |
-  | `lname` | string | Last name of the student |
-  | `grade` | integer | Class or Standard of the student |
-  | `email` | string | E-Mail ID of the student |
-  | `phone` | string | Phone number of the student |
-  
+ 
   ### Example Request:
   ```
   curl -X GET http://3.110.186.160/get/63e62b6acfb9e4b870113b1e
@@ -140,6 +131,15 @@ Below is the APIs used in the application and some examples along with it.
   ```  
   ### Method:
   `PUT/PATCH`
+ 
+  ### Request Body:
+  | Parameter | Type | Description |
+  |-----------|------|-------------|
+  | `fname` | string | First name of the student |
+  | `lname` | string | Last name of the student |
+  | `grade` | integer | Class or Standard of the student |
+  | `email` | string | E-Mail ID of the student |
+  | `phone` | string | Phone number of the student |
   
   ### Example Request:
   ```
